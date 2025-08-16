@@ -12,7 +12,7 @@ const Sidebar = () => {
 
   const socialLinks = [
     { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: Github, label: "GitHub", href: "#" },
+    { icon: Github, label: "GitHub", href: "#" },  
     { icon: Send, label: "Telegram", href: "#" },
     { icon: Phone, label: "Phone", href: "#" },
   ];
@@ -22,8 +22,7 @@ const Sidebar = () => {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="fixed left-0 top-0 h-full w-80 bg-sidebar-background border-r border-sidebar-border z-50"
-      style={{ background: "var(--gradient-sidebar)" }}
+      className="fixed left-0 top-0 h-full w-80 border-r border-sidebar-border z-50 bg-sidebar-background/95 backdrop-blur-xl"
     >
       <div className="flex flex-col h-full p-6">
         {/* Categories Section */}

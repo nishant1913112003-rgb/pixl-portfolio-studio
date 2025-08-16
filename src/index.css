@@ -165,27 +165,44 @@
   
   /* Sidebar Styles */
   .sidebar-nav {
-    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sidebar-foreground hover:bg-sidebar-accent transition-all duration-200;
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-all duration-200;
   }
   
   .sidebar-nav.active {
     @apply bg-gradient-primary text-white shadow-button;
   }
   
-  /* Tech Skill Icons */
+  /* Tech Skill Icons - Matching reference design */
   .tech-icon {
-    @apply w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-sm transition-all duration-300 hover:scale-110;
-    box-shadow: var(--shadow-tech);
+    @apply w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-sm transition-all duration-300 hover:scale-110 shadow-lg;
   }
   
-  .tech-html { background: hsl(var(--tech-html)); --tech-color: var(--tech-html); }
-  .tech-css { background: hsl(var(--tech-css)); --tech-color: var(--tech-css); }
-  .tech-js { background: hsl(var(--tech-js)); --tech-color: var(--tech-js); }
-  .tech-ts { background: hsl(var(--tech-ts)); --tech-color: var(--tech-ts); }
-  .tech-react { background: hsl(var(--tech-react)); --tech-color: var(--tech-react); }
-  .tech-vue { background: hsl(var(--tech-vue)); --tech-color: var(--tech-vue); }
-  .tech-angular { background: hsl(var(--tech-angular)); --tech-color: var(--tech-angular); }
-  .tech-git { background: hsl(var(--tech-git)); --tech-color: var(--tech-git); }
+  .tech-html { 
+    background: linear-gradient(135deg, #E44D26, #F16529);
+  }
+  .tech-css { 
+    background: linear-gradient(135deg, #1572B6, #33A9DC);
+  }
+  .tech-js { 
+    background: linear-gradient(135deg, #F7DF1E, #FFDA44);
+    @apply text-black;
+  }
+  .tech-ts { 
+    background: linear-gradient(135deg, #3178C6, #4B8BFF);
+  }
+  .tech-react { 
+    background: linear-gradient(135deg, #61DAFB, #21D4FD);
+    @apply text-black;
+  }
+  .tech-vue { 
+    background: linear-gradient(135deg, #4FC08D, #42B883);
+  }
+  .tech-angular { 
+    background: linear-gradient(135deg, #DD0031, #C3002F);
+  }
+  .tech-git { 
+    background: linear-gradient(135deg, #F05032, #E44C30);
+  }
   
   /* Gradient Buttons */
   .btn-gradient {
