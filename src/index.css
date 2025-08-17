@@ -163,13 +163,71 @@
     box-shadow: var(--shadow-card);
   }
   
-  /* Sidebar Styles */
-  .sidebar-nav {
-    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sidebar-foreground/80 hover:text-sidebar-foreground hover:bg-sidebar-accent transition-all duration-200;
+  /* Loveable Sidebar Styles */
+  .loveable-nav-item {
+    position: relative;
+    overflow: hidden;
   }
   
-  .sidebar-nav.active {
-    @apply bg-gradient-primary text-white shadow-button;
+  .loveable-nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-glow);
+    transition: left 0.5s ease;
+    z-index: -1;
+  }
+  
+  .loveable-nav-item:hover::before {
+    left: 0;
+  }
+  
+  .loveable-social {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .loveable-social::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--gradient-glow);
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  .loveable-social:hover::before {
+    width: 150%;
+    height: 150%;
+  }
+  
+  .loveable-mobile-nav {
+    position: relative;
+    min-width: 60px;
+  }
+  
+  .loveable-mobile-nav::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .loveable-mobile-nav:hover::after {
+    width: 80%;
   }
   
   /* Tech Skill Icons - Matching reference design */

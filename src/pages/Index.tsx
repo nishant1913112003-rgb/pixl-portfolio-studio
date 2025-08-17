@@ -6,9 +6,10 @@ import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen bg-gradient-secondary">
+    <div className="min-h-screen bg-gradient-secondary">
       <Sidebar />
-      <main className="flex-1 ml-80">
+      {/* Desktop layout with sidebar margin */}
+      <main className="md:ml-80 pb-20 md:pb-0">
         <HeroSection />
         <TechStack />
         <ProjectsGrid />
