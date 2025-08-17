@@ -50,7 +50,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight"
               >
-                AmirAli Rashidi
+                Nishant Verma
               </motion.h1>
               
               <motion.p

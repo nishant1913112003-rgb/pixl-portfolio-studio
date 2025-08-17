@@ -26,7 +26,7 @@ export function ProfileHeader() {
               className="object-cover"
             />
             <AvatarFallback className="bg-gradient-primary text-white font-bold text-sm">
-              AR
+              NV
             </AvatarFallback>
           </Avatar>
         </div>
