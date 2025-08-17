@@ -6,12 +6,12 @@ import heroImage from "@/assets/hero-bg.jpg";
 const AboutSection = () => {
   return (
     <section id="about" className="py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden rounded-3xl p-8 lg:p-12 shadow-2xl"
+          className="relative overflow-hidden rounded-3xl p-6 lg:p-8 shadow-2xl"
           style={{
             background: "linear-gradient(135deg, #FF6B9D 0%, #FF8A80 25%, #C44AFF 50%, #8E24AA 75%, #4A90E2 100%)"
           }}
@@ -42,13 +42,13 @@ const AboutSection = () => {
             ))}
           </div>
 
-          <div className="flex flex-col xl:flex-row items-center gap-12 relative z-10">
-            <div className="flex-1 max-w-2xl">
+          <div className="flex flex-col xl:flex-row items-center gap-8 relative z-10">
+            <div className="flex-1 max-w-xl">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight"
+                className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight"
               >
                 AmirAli Rashidi
               </motion.h1>
@@ -57,7 +57,7 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-white/95 text-lg lg:text-xl leading-relaxed mb-8 font-medium"
+                className="text-white/95 text-base lg:text-lg leading-relaxed mb-6 font-medium"
               >
                 Innovative <span className="text-yellow-300 font-semibold">Front-End Developer</span> with 4+ years of expertise in building
                 responsive, high-performance web applications using <span className="text-blue-200 font-semibold">Angular</span>, <span className="text-green-200 font-semibold">Vue</span>, and <span className="text-cyan-200 font-semibold">React</span>.
@@ -83,7 +83,7 @@ const AboutSection = () => {
             </div>
             
             {/* Enhanced 3D Illustration */}
-            <div className="xl:w-96 flex-shrink-0">
+            <div className="xl:w-72 flex-shrink-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -102,7 +102,7 @@ const AboutSection = () => {
                 className="relative"
               >
                 {/* Main 3D Container */}
-                <div className="relative w-80 h-80 mx-auto">
+                <div className="relative w-64 h-64 mx-auto">
                   {/* Floating Tech Elements */}
                   <motion.div
                     animate={{ rotate: 360 }}

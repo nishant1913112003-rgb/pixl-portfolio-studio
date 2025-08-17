@@ -3,10 +3,12 @@ import HeroSection from "@/components/HeroSection";
 import TechStack from "@/components/TechStack";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import ContactForm from "@/components/ContactForm";
+import { ProfileHeader } from "@/components/ProfileHeader";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-secondary">
+      <ProfileHeader />
       <Sidebar />
       {/* Desktop layout with sidebar margin */}
       <main className="md:ml-80 pb-20 md:pb-0">
