@@ -43,17 +43,17 @@ const AboutSection = () => {
           </div>
 
           <div className="flex flex-col items-center text-center relative z-10 max-w-2xl mx-auto">
-            {/* Profile Photo */}
+            {/* Developer Illustration */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="w-32 h-32 rounded-full mb-6 bg-gradient-to-br from-purple-400 via-blue-500 to-cyan-500 p-1 shadow-2xl"
+              className="w-48 h-36 mb-6 rounded-2xl overflow-hidden shadow-2xl"
             >
               <img 
-                src="/lovable-uploads/8bc6467e-8b24-4d4f-bb75-b20e82a1e67e.png" 
-                alt="Nishant Verma" 
-                className="w-full h-full rounded-full object-cover"
+                src="/lovable-uploads/96681363-fdbf-4dac-afb2-7009e4fe24be.png" 
+                alt="Developer at work" 
+                className="w-full h-full object-cover"
               />
             </motion.div>
 
@@ -62,7 +62,7 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-6 leading-tight"
+              className="text-2xl lg:text-3xl xl:text-4xl font-bold text-white mb-4 leading-tight"
             >
               Nishant Verma
             </motion.h1>
@@ -72,7 +72,7 @@ const AboutSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-white/95 text-base lg:text-lg leading-relaxed mb-8 font-medium"
+              className="text-white/95 text-sm lg:text-base leading-relaxed mb-6 font-medium"
             >
               Innovative <span className="text-yellow-300 font-semibold">Front-End Developer</span> with 4+ years of expertise in building
               responsive, high-performance web applications using <span className="text-blue-200 font-semibold">Angular</span>, <span className="text-green-200 font-semibold">Vue</span>, and <span className="text-cyan-200 font-semibold">React</span>.
