@@ -86,7 +86,7 @@ const ProjectsGrid = () => {
   };
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
@@ -96,10 +96,10 @@ const ProjectsGrid = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto">
             A showcase of my recent work and creative solutions
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ const ProjectsGrid = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
         >
           {projects.map((project) => (
             <motion.div
@@ -118,11 +118,11 @@ const ProjectsGrid = () => {
               variants={itemVariants}
               whileHover={{ y: -8 }}
               className={`glass-card overflow-hidden group cursor-pointer ${
-                project.featured ? 'md:col-span-2 lg:col-span-1' : ''
+                project.featured ? 'sm:col-span-2 lg:col-span-1' : ''
               }`}
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden h-48">
+              <div className="relative overflow-hidden h-32 sm:h-40 md:h-48">
                 <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                   <div className="text-6xl opacity-20">
                     {project.title.charAt(0)}
@@ -131,21 +131,21 @@ const ProjectsGrid = () => {
                 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  <div className="flex space-x-4">
+                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 px-4">
                     <Button
                       size="sm"
                       variant="glass"
-                      className="text-white border-white/20 hover:bg-white/10"
+                      className="text-white border-white/20 hover:bg-white/10 text-xs sm:text-sm"
                     >
-                      <Github className="w-4 h-4 mr-2" />
+                      <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                       Code
                     </Button>
                     <Button
                       size="sm"
                       variant="glow"
-                      className="text-white"
+                      className="text-white text-xs sm:text-sm"
                     >
-                      <ExternalLink className="w-4 h-4 mr-2" />
+                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                       Live Demo
                     </Button>
                   </div>
@@ -161,20 +161,20 @@ const ProjectsGrid = () => {
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-4 line-clamp-3">
+                <p className="text-muted-foreground mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3 text-sm sm:text-base">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md font-medium"
+                      className="px-2 py-0.5 sm:py-1 bg-primary/10 text-primary text-xs rounded-md font-medium"
                     >
                       {tech}
                     </span>
@@ -182,26 +182,26 @@ const ProjectsGrid = () => {
                 </div>
 
                 {/* Project Links */}
-                <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                  <div className="flex space-x-4">
+                <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-border/50">
+                  <div className="flex space-x-3 sm:space-x-4">
                     <a
                       href={project.github}
                       className="text-muted-foreground hover:text-primary transition-colors"
                       aria-label="View source code"
                     >
-                      <Github className="w-5 h-5" />
+                      <Github className="w-4 h-4 sm:w-5 sm:h-5" />
                     </a>
                     <a
                       href={project.live}
                       className="text-muted-foreground hover:text-primary transition-colors"
                       aria-label="View live demo"
                     >
-                      <ExternalLink className="w-5 h-5" />
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
                     </a>
                   </div>
                   
                   <motion.div
-                    className="flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-all duration-300"
+                    className="hidden sm:flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-all duration-300"
                     whileHover={{ x: 4 }}
                   >
                     View Project
