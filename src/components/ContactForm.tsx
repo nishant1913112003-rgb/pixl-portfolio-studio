@@ -69,7 +69,7 @@ const ContactForm = () => {
   ];
 
   return (
-    <section className="pt-6 sm:pt-10 pb-12 sm:pb-20 px-4 sm:px-6">
+    <section className="pt-2 sm:pt-4 pb-12 sm:pb-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <motion.div

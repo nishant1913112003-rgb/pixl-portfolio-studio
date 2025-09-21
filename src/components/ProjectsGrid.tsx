@@ -219,7 +219,7 @@ const ProjectsGrid = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-8 sm:mt-10"
+          className="text-center mt-6 sm:mt-8"
         >
           <Button variant="glow" size="lg" className="group">
             View All Projects
