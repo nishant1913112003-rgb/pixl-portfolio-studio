@@ -86,7 +86,7 @@ const ProjectsGrid = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+    <section className="pt-6 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
