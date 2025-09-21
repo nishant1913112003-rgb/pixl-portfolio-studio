@@ -69,7 +69,7 @@ const ContactForm = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 sm:py-20 px-4 sm:px-6">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
         <motion.div
@@ -77,31 +77,31 @@ const ContactForm = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Let's Work Together
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-2">
             Have a project in mind? I'd love to hear about it. Let's create something amazing together.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-card p-8"
+            className="glass-card p-4 sm:p-6 lg:p-8 order-2 lg:order-1"
           >
-            <h3 className="text-2xl font-semibold mb-6 text-foreground">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-foreground">
               Send me a message
             </h3>
 
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2 text-foreground">
                     Name *
@@ -198,29 +198,29 @@ const ContactForm = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2"
           >
-            <div className="glass-card p-8">
-              <h3 className="text-2xl font-semibold mb-6 text-foreground">
+            <div className="glass-card p-4 sm:p-6 lg:p-8">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6 text-foreground">
                 Get in touch
               </h3>
               
-              <div className="space-y-6">
+              <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                 {contactInfo.map((item) => (
                   <motion.a
                     key={item.label}
                     href={item.href}
                     whileHover={{ x: 4 }}
-                    className="flex items-center space-x-4 p-4 rounded-lg bg-background-secondary/50 hover:bg-background-secondary transition-colors group"
+                    className="flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg bg-background-secondary/50 hover:bg-background-secondary transition-colors group"
                   >
-                    <div className="p-3 bg-gradient-primary rounded-lg">
-                      <item.icon className="w-5 h-5 text-white" />
+                    <div className="p-2 sm:p-3 bg-gradient-primary rounded-lg flex-shrink-0">
+                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
-                    <div>
-                      <div className="text-sm text-muted-foreground">
+                    <div className="min-w-0 flex-1">
+                      <div className="text-xs sm:text-sm text-muted-foreground">
                         {item.label}
                       </div>
-                      <div className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      <div className="font-medium text-sm sm:text-base text-foreground group-hover:text-primary transition-colors break-words">
                         {item.value}
                       </div>
                     </div>
@@ -230,11 +230,11 @@ const ContactForm = () => {
             </div>
 
             {/* Social Links */}
-            <div className="glass-card p-8">
-              <h4 className="text-xl font-semibold mb-4 text-foreground">
+            <div className="glass-card p-4 sm:p-6 lg:p-8">
+              <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground">
                 Follow me
               </h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-3 sm:space-x-4">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.label}
@@ -242,9 +242,9 @@ const ContactForm = () => {
                     aria-label={social.label}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-3 bg-background-secondary rounded-lg hover:shadow-glow transition-all duration-300 group"
+                    className="p-2.5 sm:p-3 bg-background-secondary rounded-lg hover:shadow-glow transition-all duration-300 group"
                   >
-                    <social.icon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+                    <social.icon className="w-5 h-5 sm:w-6 sm:h-6 text-muted-foreground group-hover:text-primary transition-colors" />
                   </motion.a>
                 ))}
               </div>
@@ -256,13 +256,13 @@ const ContactForm = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="glass-card p-6 text-center"
+              className="glass-card p-4 sm:p-6 text-center"
             >
-              <div className="flex items-center justify-center mb-3">
-                <div className="w-3 h-3 bg-success rounded-full mr-3 animate-pulse" />
-                <span className="text-success font-medium">Available for work</span>
+              <div className="flex items-center justify-center mb-2 sm:mb-3">
+                <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-success rounded-full mr-2 sm:mr-3 animate-pulse" />
+                <span className="text-success font-medium text-sm sm:text-base">Available for work</span>
               </div>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-muted-foreground text-xs sm:text-sm">
                 Currently accepting new projects and collaborations
               </p>
             </motion.div>
