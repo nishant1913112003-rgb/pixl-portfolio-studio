@@ -21,7 +21,7 @@ export function ProfileHeader() {
         <div className="w-12 h-12 rounded-full bg-gradient-primary p-0.5">
           <Avatar className="w-full h-full">
             <AvatarImage 
-              src="/lovable-uploads/8bc6467e-8b24-4d4f-bb75-b20e82a1e67e.png" 
+              src="/lovable-uploads/profile-photo.jpg" 
               alt="Profile" 
               className="object-cover"
             />
