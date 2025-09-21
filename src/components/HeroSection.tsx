@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-bg.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-16 px-6">
+    <section id="about" className="pt-16 pb-8 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
