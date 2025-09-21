@@ -86,7 +86,7 @@ const ProjectsGrid = () => {
   };
 
   return (
-    <section className="pt-6 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6">
+    <section className="pt-6 pb-8 sm:pb-12 lg:pb-16 px-4 sm:px-6">
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
@@ -219,7 +219,7 @@ const ProjectsGrid = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
+          className="text-center mt-8 sm:mt-10"
         >
           <Button variant="glow" size="lg" className="group">
             View All Projects
