@@ -117,96 +117,65 @@ const ProjectsGrid = () => {
               key={project.id}
               variants={itemVariants}
               whileHover={{ y: -8 }}
-              className={`glass-card overflow-hidden group cursor-pointer ${
-                project.featured ? 'sm:col-span-2 lg:col-span-1' : ''
-              }`}
+              className="glass-card overflow-hidden group cursor-pointer bg-card/80 backdrop-blur-sm border border-border/30"
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden h-32 sm:h-40 md:h-48">
-                <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <div className="text-6xl opacity-20">
+              <div className="relative overflow-hidden h-48 sm:h-56 md:h-64 bg-gradient-to-br from-muted/50 to-muted/30">
+                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
+                  <div className="text-8xl opacity-10 font-bold">
                     {project.title.charAt(0)}
                   </div>
                 </div>
-                
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 px-4">
-                    <Button
-                      size="sm"
-                      variant="glass"
-                      className="text-white border-white/20 hover:bg-white/10 text-xs sm:text-sm"
-                    >
-                      <Github className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                      Code
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="glow"
-                      className="text-white text-xs sm:text-sm"
-                    >
-                      <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
-                      Live Demo
-                    </Button>
-                  </div>
-                </div>
 
+                {/* Featured Badge */}
                 {project.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-gradient-primary text-white text-xs font-semibold rounded-full">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="px-3 py-1 bg-gradient-primary text-white text-xs font-semibold rounded-full shadow-lg">
                       Featured
                     </span>
                   </div>
                 )}
+
+                {/* Action Buttons */}
+                <div className="absolute bottom-4 left-4 flex gap-2">
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    className="bg-background/90 hover:bg-background text-foreground border border-border/50 backdrop-blur-sm"
+                  >
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="default"
+                    className="bg-gradient-primary hover:opacity-90 text-white shadow-lg"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Live Demo
+                  </Button>
+                </div>
               </div>
 
               {/* Project Content */}
-              <div className="p-4 sm:p-6">
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-3 text-foreground">
                   {project.title}
                 </h3>
-                <p className="text-muted-foreground mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3 text-sm sm:text-base">
+                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
                   {project.description}
                 </p>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 sm:py-1 bg-primary/10 text-primary text-xs rounded-md font-medium"
+                      className="px-2 py-1 bg-muted/80 text-muted-foreground text-xs rounded-md font-medium border border-border/30"
                     >
                       {tech}
                     </span>
                   ))}
-                </div>
-
-                {/* Project Links */}
-                <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-border/50">
-                  <div className="flex space-x-3 sm:space-x-4">
-                    <a
-                      href={project.github}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="View source code"
-                    >
-                      <Github className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </a>
-                    <a
-                      href={project.live}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                      aria-label="View live demo"
-                    >
-                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </a>
-                  </div>
-                  
-                  <motion.div
-                    className="hidden sm:flex items-center text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-all duration-300"
-                    whileHover={{ x: 4 }}
-                  >
-                    View Project
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </motion.div>
                 </div>
               </div>
             </motion.div>
