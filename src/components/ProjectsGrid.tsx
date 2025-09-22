@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import ecommerceImg from "@/assets/project-ecommerce.jpg";
+import taskmanagerImg from "@/assets/project-taskmanager.jpg";
+import weatherImg from "@/assets/project-weather.jpg";
+import portfolioImg from "@/assets/project-portfolio.jpg";
+import socialImg from "@/assets/project-social.jpg";
+import fitnessImg from "@/assets/project-fitness.jpg";
 
 const ProjectsGrid = () => {
   const projects = [
@@ -8,60 +14,60 @@ const ProjectsGrid = () => {
       id: 1,
       title: "E-Commerce Dashboard",
       description: "Modern admin dashboard with real-time analytics, inventory management, and order tracking.",
-      image: "/api/placeholder/600/400",
+      image: ecommerceImg,
       tech: ["React", "TypeScript", "TailwindCSS", "Chart.js"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/yourusername/ecommerce-dashboard",
+      live: "https://ecommerce-dashboard-demo.vercel.app",
       featured: true
     },
     {
       id: 2,
       title: "Task Management App",
       description: "Collaborative project management tool with drag-and-drop functionality and team features.",
-      image: "/api/placeholder/600/400",
+      image: taskmanagerImg,
       tech: ["Next.js", "MongoDB", "Framer Motion", "Node.js"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/yourusername/task-manager",
+      live: "https://task-manager-demo.vercel.app",
       featured: true
     },
     {
       id: 3,
       title: "Weather App",
       description: "Beautiful weather application with location-based forecasts and interactive maps.",
-      image: "/api/placeholder/600/400",
+      image: weatherImg,
       tech: ["React", "OpenWeather API", "Mapbox", "CSS3"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/yourusername/weather-app",
+      live: "https://weather-app-demo.vercel.app",
       featured: false
     },
     {
       id: 4,
       title: "Portfolio Website",
       description: "Responsive portfolio showcase with smooth animations and modern design principles.",
-      image: "/api/placeholder/600/400",
+      image: portfolioImg,
       tech: ["Next.js", "Framer Motion", "TailwindCSS", "MDX"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/yourusername/portfolio",
+      live: "https://portfolio-demo.vercel.app",
       featured: false
     },
     {
       id: 5,
       title: "Social Media Dashboard",
       description: "Analytics dashboard for social media management with automated reporting features.",
-      image: "/api/placeholder/600/400",
+      image: socialImg,
       tech: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/yourusername/social-dashboard",
+      live: "https://social-dashboard-demo.vercel.app",
       featured: false
     },
     {
       id: 6,
       title: "Fitness Tracker",
       description: "Personal fitness application with workout planning and progress tracking capabilities.",
-      image: "/api/placeholder/600/400",
+      image: fitnessImg,
       tech: ["React Native", "Firebase", "Redux", "Charts"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/yourusername/fitness-tracker",
+      live: "https://fitness-tracker-demo.vercel.app",
       featured: false
     }
   ];
@@ -120,12 +126,12 @@ const ProjectsGrid = () => {
               className="glass-card overflow-hidden group cursor-pointer bg-card/80 backdrop-blur-sm border border-border/30"
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden h-48 sm:h-56 md:h-64 bg-gradient-to-br from-muted/50 to-muted/30">
-                <div className="w-full h-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                  <div className="text-8xl opacity-10 font-bold">
-                    {project.title.charAt(0)}
-                  </div>
-                </div>
+              <div className="relative overflow-hidden h-48 sm:h-56 md:h-64">
+                <img 
+                  src={project.image} 
+                  alt={`${project.title} screenshot`}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
 
                 {/* Featured Badge */}
                 {project.featured && (
@@ -142,6 +148,7 @@ const ProjectsGrid = () => {
                     size="sm"
                     variant="ghost"
                     className="bg-background/90 hover:bg-background text-foreground border border-border/50 backdrop-blur-sm"
+                    onClick={() => window.open(project.github, '_blank')}
                   >
                     <Github className="w-4 h-4 mr-2" />
                     Code
@@ -150,6 +157,7 @@ const ProjectsGrid = () => {
                     size="sm"
                     variant="default"
                     className="bg-gradient-primary hover:opacity-90 text-white shadow-lg"
+                    onClick={() => window.open(project.live, '_blank')}
                   >
                     <ExternalLink className="w-4 h-4 mr-2" />
                     Live Demo
