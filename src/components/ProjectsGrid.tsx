@@ -7,6 +7,7 @@ import weatherImg from "@/assets/project-weather.jpg";
 import portfolioImg from "@/assets/project-portfolio.jpg";
 import socialImg from "@/assets/project-social.jpg";
 import fitnessImg from "@/assets/project-fitness.jpg";
+import academyImg from "@/assets/project-academy.jpg";
 
 const ProjectsGrid = () => {
   const projects = [
@@ -69,6 +70,16 @@ const ProjectsGrid = () => {
       github: "https://github.com/yourusername/fitness-tracker",
       live: "https://fitness-tracker-demo.vercel.app",
       featured: false
+    },
+    {
+      id: 7,
+      title: "Academy Vista",
+      description: "Modern educational platform with course management, student tracking, and interactive learning features.",
+      image: academyImg,
+      tech: ["React", "Next.js", "TailwindCSS", "TypeScript"],
+      github: "https://github.com/yourusername/academy-vista",
+      live: "https://academy-vista-webfront.vercel.app/",
+      featured: true
     }
   ];
 
