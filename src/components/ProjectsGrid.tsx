@@ -4,6 +4,7 @@ import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import aurelionImg from "@/assets/aurelion-builders.jpg";
 import weatherImg from "@/assets/weather-dashboard.jpg";
 import todoImg from "@/assets/todo-app.jpg";
+import academyImg from "@/assets/project-academy.jpg";
 
 const ProjectsGrid = () => {
   const projects = [
@@ -35,6 +36,16 @@ const ProjectsGrid = () => {
       tech: ["React", "Local Storage", "CSS Gradients", "JavaScript"],
       github: "https://github.com/yourusername/simple-todo-app",
       live: "https://simple-todo-app-cyan-gamma.vercel.app/",
+      featured: true
+    },
+    {
+      id: 4,
+      title: "Academy Vista",
+      description: "Modern educational platform with course management, student tracking, and interactive learning features.",
+      image: academyImg,
+      tech: ["React", "Next.js", "TailwindCSS", "TypeScript"],
+      github: "https://github.com/yourusername/academy-vista",
+      live: "https://academy-vista-webfront.vercel.app/",
       featured: true
     }
   ];
