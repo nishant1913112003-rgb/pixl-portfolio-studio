@@ -1,84 +1,40 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
-import ecommerceImg from "@/assets/project-ecommerce.jpg";
-import taskmanagerImg from "@/assets/project-taskmanager.jpg";
-import weatherImg from "@/assets/project-weather.jpg";
-import portfolioImg from "@/assets/project-portfolio.jpg";
-import socialImg from "@/assets/project-social.jpg";
-import fitnessImg from "@/assets/project-fitness.jpg";
-import academyImg from "@/assets/project-academy.jpg";
+import aurelionImg from "@/assets/aurelion-builders.jpg";
+import weatherImg from "@/assets/weather-dashboard.jpg";
+import todoImg from "@/assets/todo-app.jpg";
 
 const ProjectsGrid = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Dashboard",
-      description: "Modern admin dashboard with real-time analytics, inventory management, and order tracking.",
-      image: ecommerceImg,
-      tech: ["React", "TypeScript", "TailwindCSS", "Chart.js"],
-      github: "https://github.com/yourusername/ecommerce-dashboard",
-      live: "https://ecommerce-dashboard-demo.vercel.app",
+      title: "Aurelion Builders",
+      description: "Professional construction and real estate company website with comprehensive services, project showcases, and modern design.",
+      image: aurelionImg,
+      tech: ["React", "TailwindCSS", "JavaScript", "Responsive Design"],
+      github: "https://github.com/yourusername/aurelion-builders",
+      live: "https://aurelionbuilders.com/",
       featured: true
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "Collaborative project management tool with drag-and-drop functionality and team features.",
-      image: taskmanagerImg,
-      tech: ["Next.js", "MongoDB", "Framer Motion", "Node.js"],
-      github: "https://github.com/yourusername/task-manager",
-      live: "https://task-manager-demo.vercel.app",
+      title: "Weather Dashboard",
+      description: "Interactive weather application with location search, current weather, hourly and 5-day forecasts.",
+      image: weatherImg,
+      tech: ["React", "Weather API", "Location Services", "CSS3"],
+      github: "https://github.com/yourusername/weather-dashboard",
+      live: "https://weather-web-app-omega-neon.vercel.app/",
       featured: true
     },
     {
       id: 3,
-      title: "Weather App",
-      description: "Beautiful weather application with location-based forecasts and interactive maps.",
-      image: weatherImg,
-      tech: ["React", "OpenWeather API", "Mapbox", "CSS3"],
-      github: "https://github.com/yourusername/weather-app",
-      live: "https://weather-app-demo.vercel.app",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description: "Responsive portfolio showcase with smooth animations and modern design principles.",
-      image: portfolioImg,
-      tech: ["Next.js", "Framer Motion", "TailwindCSS", "MDX"],
-      github: "https://github.com/yourusername/portfolio",
-      live: "https://portfolio-demo.vercel.app",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Social Media Dashboard",
-      description: "Analytics dashboard for social media management with automated reporting features.",
-      image: socialImg,
-      tech: ["Vue.js", "Express", "PostgreSQL", "Chart.js"],
-      github: "https://github.com/yourusername/social-dashboard",
-      live: "https://social-dashboard-demo.vercel.app",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Fitness Tracker",
-      description: "Personal fitness application with workout planning and progress tracking capabilities.",
-      image: fitnessImg,
-      tech: ["React Native", "Firebase", "Redux", "Charts"],
-      github: "https://github.com/yourusername/fitness-tracker",
-      live: "https://fitness-tracker-demo.vercel.app",
-      featured: false
-    },
-    {
-      id: 7,
-      title: "Academy Vista",
-      description: "Modern educational platform with course management, student tracking, and interactive learning features.",
-      image: academyImg,
-      tech: ["React", "Next.js", "TailwindCSS", "TypeScript"],
-      github: "https://github.com/yourusername/academy-vista",
-      live: "https://academy-vista-webfront.vercel.app/",
+      title: "Simple Todo App",
+      description: "Clean and minimalist task management application with gradient design and smooth user experience.",
+      image: todoImg,
+      tech: ["React", "Local Storage", "CSS Gradients", "JavaScript"],
+      github: "https://github.com/yourusername/simple-todo-app",
+      live: "https://simple-todo-app-cyan-gamma.vercel.app/",
       featured: true
     }
   ];
